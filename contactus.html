@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ChicagoVeg - Community for Chicago area vegetarians, vegans, raw foodists, or any veg-curious and their friends. ">
+    <meta name="keywords" content="ChicagoVeg, Chicago Veg, Vegetarian, Vegan, Raw Food, Chicago, Veg, Veggie, Vegetarian organization, Vegan, Raw Foodists, Vegetarians in Chicago, Animal Lover, Conscious Living, Save Planet, Solve Environmental Issues, Chicagoland, Chicago area, Chicago suburbs, Vegs, Veggies, Vegetarians, Vegans, Raw Foodists, Animal Welfare, Personal Health, Alternative Healing, Harmony in Life, Community, organic, IL, illinois, people who care">
+    <title>Contact Us | ChicagoVeg</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/ico">
+    <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles/style.css" rel="stylesheet">
+    <link href="./lib/css/font-awesome.min.css" rel="stylesheet">
+</head>
+    <body data-highlightselectedtabbyid="contactus">
+        <div class="backframe">
+
+            <header>
+                <!-- Do not delete. This is used for providing facebook with an image  -->
+                <div>
+                    <img src="./images/ChicagoVeg.jpg" width="1" height="1" alt="information link image">
+                </div>
+            </header>
+
+
+<!--#include file="navbar.shtml"-->
+
+            <section class="body-content">
+                <article>
+                    <div class="text-center  bolder header-text" style="display:none;">
+                        <h2>
+             ChicagoVeg
+         </h2>
+                        For Earth ~ For Animals ~ For You
+                    </div>
+                    <div class="tab-content">
+                        <router-view class="">
+                            <h4>Contact Us</h4>
+                            <br>
+                            <div class="centering subtext">
+                                <div id="sending-message-spinner">
+                                <!--     <form id="contactForm" method="post" action="src/php/form.php"> -->
+                                <form id="contactForm">
+                                        <div class="form-group">
+                                            <label for="nameBox">Name</label>
+                                            <input name="name" value.bind="name" required="" id="nameBox" class="form-control contact-line" placeholder="name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="emailBox">E-Mail</label>
+                                            <input name="email" type="email" required="" id="emailBox" class="form-control contact-line " placeholder="email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Message</label>
+                                            <textarea id="messageBox" name="message" value.bind="message" required="" class="form-control contact-line " cols="20" rows="5" placeholder="message"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="g-recaptcha" data-sitekey="6Leh-rodAAAAAJjD-18AyqD3ttf1KIhgCJ1OrfN-" data-theme="light"></div>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="submit" name="submit" type="submit" value="Submit">
+                                            <input id="reset" type="reset" name="reset" value="Reset">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="messageSent" style="display: none;">
+                                    <span class="messageSent">Message was sent</span>
+                                </div>
+                                <div id="messageNotSent" style="display: none;">
+                                    <span class="messageNotSent">Message was not sent. Ensure you are connected to the internet </span>
+                                </div>
+                            </div>
+                        </router-view>
+                    </div>
+                </article>
+            </section>
+
+            <div class="bottom">
+                <!--#include file="sponsors.shtml"-->
+      <br>
+<!--#include file="facebook.shtml"-->
+
+            </div>
+            </div>        </div>
+        <footer>
+<!--#include file="footer.shtml"-->
+        </footer>
+
+
+    </body>
+    <!-- external scripts-->
+    <script src="./lib/js/jQuery.min.js"></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" defer></script>
+    <script src="./lib/js/spin.min.js"></script>
+
+    <!-- internal scripts-->
+    <script src="./src/js/contact.js"></script>
+    <script src="./src/js/socialMedia.js"></script>
+    <script src="./src/js/highlightSelectedTab.js"></script>
+
+</html>
